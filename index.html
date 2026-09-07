@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sperone D’Italia | Ristorante · Pizzeria</title>
+  <meta name="description"
+    content="Prenota il tuo tavolo al Ristorante-Pizzeria Sperone D’Italia. Scopri il nostro menu di specialità di mare e pizze artigianali, e goditi un’atmosfera accogliente con area dedicata ai bambini.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sperone D’Italia | Ristorante · Pizzeria">
+  <meta property="og:description"
+    content="Specialità di mare generose, pizza artigianale fragrante e area bimbi accogliente a Sarezzo (BS).">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/platter.png">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation Bar
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container-custom header-inner">
+      <!-- Brand Logo & Name -->
+      <a href="#top" class="brand-link">
+        <img src="assets/images/logo.jpg" alt="Sperone D’Italia" class="brand-avatar">
+        <span class="brand-title">
+          Sperone D’Italia
+          <span class="brand-subtitle">Ristorante · Pizzeria</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links">
+        <a href="#specialita" class="nav-item" data-i18n="navFood">Specialità</a>
+        <a href="#menu" class="nav-item" data-i18n="navMenu">Menu</a>
+        <a href="#esperienza" class="nav-item" data-i18n="navExperience">Esperienza</a>
+        <a href="#visita" class="nav-item" data-i18n="navVisit">Visita</a>
+      </nav>
+
+      <!-- Action Buttons (Lang, Theme, Call, Mobile Menu) -->
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <button id="btnLang" class="btn-lang" aria-label="Change language">IT | EN</button>
+
+        <!-- Theme Switcher -->
+        <button id="btnTheme" class="btn-theme" aria-label="Cambia tema" data-i18n-aria="theme">
+          <span id="iconTheme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <!-- Call CTA Button -->
+        <a href="tel:+393332680191" class="btn-call-header">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span data-i18n="call">Chiama</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section: Split Video Showcases (#top)
+         ========================================================================== -->
+    <section id="top" class="hero-section">
+      <div class="hero-grid">
+        <!-- Left Hero Card (Seafood) -->
+        <div class="hero-card">
+          <video autoplay muted loop playsinline class="hero-video" src="assets/videos/fishtime.mp4"></video>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <p class="hero-eyebrow" data-i18n="since">L’emozione di piatti unici</p>
+            <h2 class="hero-title" data-i18n="sea">Specialità di Mare</h2>
+            <a href="#specialita" class="hero-btn-link">
+              <span data-i18n="discover">Scopri il mare</span>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14"></path>
+                <path d="m19 12-7 7-7-7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Card (Artisan Pizza) -->
+        <div class="hero-card">
+          <video autoplay muted loop playsinline class="hero-video" src="assets/videos/panzerotto.mp4"></video>
+          <div class="hero-overlay"></div>
+          <div class="hero-content text-right">
+            <p class="hero-eyebrow" data-i18n="handmade">Impasto, calore, carattere</p>
+            <h2 class="hero-title" data-i18n="pizza">Pizza Artigianale</h2>
+            <a href="#menu" class="hero-btn-link">
+              <span data-i18n="menu">Esplora il menu</span>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14"></path>
+                <path d="m19 12-7 7-7-7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Floating Dal 2010 Badge -->
+      <div class="hero-badge-center">
+        <span class="badge-eyebrow" data-i18n="emotion">L’emozione di piatti unici</span>
+        <span class="badge-year">Dal 2010</span>
+      </div>
+
+      <!-- Floating Mobile Call Button -->
+      <a href="tel:+393332680191" class="btn-floating-call">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+        <span data-i18n="call">Chiama</span>
+      </a>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Identity & Specialties (#specialita)
+         ========================================================================== -->
+    <section id="specialita" class="container-custom section-identity">
+      <div class="identity-grid">
+        <!-- Text & Stats Column -->
+        <div class="identity-text-col">
+          <p class="eyebrow" data-i18n="identityTag">La nostra identità</p>
+          <h2 class="section-title-large" data-i18n="identityTitle">Due anime, una tavola italiana.</h2>
+          <p class="identity-body" data-i18n="identityBody">
+            Sapori di mare generosi, pizza fragrante e un’accoglienza semplice e autentica. Sperone D’Italia è il posto
+            dove ogni tavolo trova il suo momento.
+          </p>
+          <div class="identity-stats">
+            <div>
+              <strong class="stat-number">2010</strong>
+              <p class="stat-label" data-i18n="sinceLabel">anni di ospitalità</p>
+            </div>
+            <div>
+              <strong class="stat-number">2 <span data-i18n="souls">anime</span></strong>
+              <p class="stat-label" data-i18n="seaPizza">mare e pizza</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Overlapping Images Composition -->
+        <div class="identity-media-col">
+          <img src="assets/images/platter.png" alt="Grande selezione di specialità di mare servita al tavolo"
+            class="img-main-rounded" data-i18n-alt="platterAlt">
+          <div class="img-overlap-corner">
+            <img src="assets/images/pasta.jpg" alt="Linguine ai frutti di mare con cozze e gamberi"
+              data-i18n-alt="pastaAlt">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Menu & Specialties Preview (#menu)
+         ========================================================================== -->
+    <section id="menu" class="section-menu">
+      <div class="container-custom menu-grid">
+        <!-- Left Details Column -->
+        <div>
+          <p class="menu-eyebrow" data-i18n="menuTag">Il gusto prima di tutto</p>
+          <h2 class="menu-title" data-i18n="menuTitle">Il menu che mette d’accordo tutti.</h2>
+          <p class="menu-body" data-i18n="menuBody">
+            Dal mare alla pizzeria, fino al dolce: scopri la proposta completa del ristorante senza prezzi o piatti
+            inventati.
+          </p>
+
+          <div class="menu-items-list">
+            <!-- Cucina di mare -->
+            <div class="menu-row">
+              <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path>
+                <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1">
+                </path>
+                <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1">
+                </path>
+              </svg>
+              <div>
+                <h3 class="menu-row-title" data-i18n="menuSea">Cucina di mare</h3>
+                <p class="menu-row-desc" data-i18n="menuSeaText">Piatti ricchi, profumi mediterranei e materia prima
+                  protagonista.</p>
+              </div>
+            </div>
+
+            <!-- Pizzeria -->
+            <div class="menu-row">
+              <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 11h.01"></path>
+                <path d="M11 15h.01"></path>
+                <path d="M16 16h.01"></path>
+                <path d="m2 16 20 6-6-20A20 20 0 0 0 2 16Z"></path>
+                <path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"></path>
+              </svg>
+              <div>
+                <h3 class="menu-row-title" data-i18n="menuPizza">Pizzeria</h3>
+                <p class="menu-row-desc" data-i18n="menuPizzaText">Pizza ben cotta, croccante e generosamente farcita.
+                </p>
+              </div>
+            </div>
+
+            <!-- Dolci -->
+            <div class="menu-row">
+              <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="7" r="2"></circle>
+                <path d="M7.2 7.9 3 11v9c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-9c0-2-2-4-4-4"></path>
+                <path d="M16 13h5"></path>
+                <path d="M16 17h5"></path>
+                <path d="M3 13h5"></path>
+                <path d="M3 17h5"></path>
+              </svg>
+              <div>
+                <h3 class="menu-row-title" data-i18n="menuDessert">Dolci</h3>
+                <p class="menu-row-desc" data-i18n="menuDessertText">Il finale della casa, pensato per chiudere la cena
+                  con dolcezza.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Open Full Menu PDF Link -->
+          <a href="https://drive.google.com/file/d/12PTRu3j1JQNhY3GyidEbzoaZnEDqv9LF/view?usp=drive_link"
+            target="_blank" rel="noreferrer" class="btn-menu-full">
+            <span data-i18n="fullMenu">Apri il menu completo</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right Image Column -->
+        <div class="menu-media-col">
+          <img src="assets/images/linguine.jpg" alt="Piatto di linguine con gamberi, cozze e vongole"
+            class="menu-image-card" data-i18n-alt="menuImageAlt">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Family & Kids Experience (#esperienza)
+         ========================================================================== -->
+    <section id="esperienza" class="section-experience">
+      <!-- Background Blobs -->
+      <div class="blob-shape-top"></div>
+      <div class="blob-shape-bottom"></div>
+
+      <div class="container-custom" style="position: relative;">
+        <div class="experience-intro">
+          <p class="eyebrow" data-i18n="familyTag">A misura di famiglia</p>
+          <h2 class="experience-title" data-i18n="familyTitle">Voi vi godete la cena. Loro si godono il gioco.</h2>
+          <p class="experience-body" data-i18n="familyBody">
+            L’area bimbi con playground interattivo rende la serata più leggera per i genitori e più divertente per i
+            piccoli.
+          </p>
+        </div>
+
+        <div class="experience-cards-grid">
+          <!-- Card 1 -->
+          <div class="exp-card">
+            <svg class="exp-card-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" x2="10" y1="12" y2="12"></line>
+              <line x1="8" x2="8" y1="10" y2="14"></line>
+              <line x1="15" x2="15.01" y1="13" y2="13"></line>
+              <line x1="18" x2="18.01" y1="11" y2="11"></line>
+              <rect width="20" height="12" x="2" y="6" rx="6"></rect>
+            </svg>
+            <p class="exp-card-title" data-i18n="interactive">Playground interattivo</p>
+          </div>
+
+          <!-- Card 2 (Amber Highlight) -->
+          <div class="exp-card highlight-amber">
+            <svg class="exp-card-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M18 13a6 6 0 0 1-12 0"></path>
+              <line x1="9" x2="9.01" y1="9" y2="9"></line>
+              <line x1="15" x2="15.01" y1="9" y2="9"></line>
+            </svg>
+            <p class="exp-card-title" data-i18n="fun">Spazio per divertirsi</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="exp-card">
+            <svg class="exp-card-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"></path>
+              <path d="M15 11v11"></path>
+              <path d="M5 2v4a3 3 0 0 0 3 3v13"></path>
+              <path d="M8 2v4"></path>
+            </svg>
+            <p class="exp-card-title" data-i18n="relax">Più relax a tavola</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Reviews & Testimonials (#recensioni)
+         ========================================================================== -->
+    <section class="section-reviews">
+      <div class="container-custom">
+        <div class="reviews-header">
+          <div>
+            <p class="eyebrow" data-i18n="reviewsTag">Parola agli ospiti</p>
+            <h2 class="reviews-title" data-i18n="reviewsTitle">Qui si torna volentieri.</h2>
+          </div>
+          <a href="https://www.google.com/maps/place/Ristorante+Pizzeria+Sperone+D'Italia+Di+Scarale+Andrea/@45.687739,10.1836375,17z"
+            target="_blank" rel="noreferrer" class="link-google-reviews" data-i18n="googleReviews">
+            Vedi su Google Maps
+          </a>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1: Federica Montini -->
+          <article class="review-card">
+            <svg class="quote-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+              </path>
+              <path
+                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+              </path>
+            </svg>
+            <div class="stars-rating" aria-label="5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+            </div>
+            <p class="review-quote">“<span data-i18n="review1">Bellissima esperienza! Cibo ottimo, staff preparato,
+                efficiente e molto cordiale.</span>”</p>
+            <p class="review-author">Federica Montini</p>
+            <p class="review-badge">Google Local Guide</p>
+          </article>
+
+          <!-- Review 2: Robi Bruni (Terracotta Red Highlight) -->
+          <article class="review-card highlight-red">
+            <svg class="quote-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+              </path>
+              <path
+                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+              </path>
+            </svg>
+            <div class="stars-rating" aria-label="5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+            </div>
+            <p class="review-quote">“<span data-i18n="review2">Ambiente semplice ma accogliente, servizio velocissimo,
+                pizza buona, fritto misto ottimo e dolci top.</span>”</p>
+            <p class="review-author">Robi Bruni</p>
+            <p class="review-badge">Google Local Guide</p>
+          </article>
+
+          <!-- Review 3: Gianpietro Piccini -->
+          <article class="review-card">
+            <svg class="quote-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z">
+              </path>
+              <path
+                d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z">
+              </path>
+            </svg>
+            <div class="stars-rating" aria-label="5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+            </div>
+            <p class="review-quote">“<span data-i18n="review3">Angolo separato per far giocare i bambini, personale
+                simpatico e preparato. Ottima anche la pizza gluten free.</span>”</p>
+            <p class="review-author">Gianpietro Piccini</p>
+            <p class="review-badge">Google Local Guide</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Kitchen Gallery
+         ========================================================================== -->
+    <section class="container-custom section-gallery">
+      <p class="eyebrow" data-i18n="galleryTag">Dalla nostra cucina</p>
+      <h2 class="gallery-title" data-i18n="galleryTitle">Piatti che arrivano al tavolo con carattere.</h2>
+
+      <div class="gallery-grid">
+        <!-- Photo 1 -->
+        <div class="gallery-card">
+          <img src="assets/images/risotto.jpg" alt="Il risotto con crema di scampi e asparagi" class="gallery-img">
+        </div>
+
+        <!-- Photo 2 (Tall on tablet) -->
+        <div class="gallery-card gallery-card-tall">
+          <img src="assets/images/seafood.jpg" alt="Selezione di specialità di mare" class="gallery-img">
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-card">
+          <img src="assets/images/cheesecake.jpg" alt="Cheesecake al limone della casa" class="gallery-img">
+        </div>
+      </div>
+
+      <a href="https://www.instagram.com/ristorantesperoneditalia/" target="_blank" rel="noreferrer"
+        class="link-instagram" data-i18n="follow">
+        Seguici su Instagram
+      </a>
+    </section>
+
+    <!-- ==========================================================================
+         Section: Visit & Opening Hours (#visita)
+         ========================================================================== -->
+    <section id="visita" class="section-visit">
+      <div class="container-custom">
+        <div class="visit-grid">
+          <!-- Left Column: Info & Action Buttons -->
+          <div>
+            <p class="visit-eyebrow" data-i18n="visitTag">Organizza la tua visita</p>
+            <h2 class="visit-title" data-i18n="visitTitle">Il tuo tavolo ti aspetta.</h2>
+            <p class="visit-body" data-i18n="visitBody">
+              Per prenotare, chiamaci direttamente. Per raggiungerci, apri le indicazioni su Google Maps.
+            </p>
+
+            <div class="visit-actions">
+              <!-- Call to Reserve -->
+              <a href="tel:+393332680191" class="btn-visit-call">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <span data-i18n="callNow">Chiama e prenota</span>
+              </a>
+
+              <!-- Google Maps Directions -->
+              <a href="https://www.google.com/maps/place/Ristorante+Pizzeria+Sperone+D'Italia+Di+Scarale+Andrea/@45.687739,10.1836375,17z"
+                target="_blank" rel="noreferrer" class="btn-visit-directions">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                </svg>
+                <span data-i18n="directions">Indicazioni</span>
+              </a>
+            </div>
+
+            <!-- Address & Phone Info -->
+            <div class="visit-contact-info">
+              <p class="contact-row">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span data-i18n="location">Sarezzo, provincia di Brescia</span>
+              </p>
+              <p class="contact-row">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <span>333 268 0191 · 030 891 0514</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Weekly Opening Hours Table -->
+          <div class="hours-card">
+            <div class="hours-header">
+              <svg class="hours-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16.5 12"></polyline>
+              </svg>
+              <h3 class="hours-title" data-i18n="hours">Orari</h3>
+            </div>
+
+            <div class="hours-list">
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="wed">Mercoledì</span>
+                <span class="hours-time">12–14:30 · 18:30–23</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="thu">Giovedì</span>
+                <span class="hours-time">12–14:30 · 18:30–23</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="fri">Venerdì</span>
+                <span class="hours-time">12–14:30 · 18:30–23</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="sat">Sabato</span>
+                <span class="hours-time">12–14:30 · 18:30–23:30</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="sun">Domenica</span>
+                <span class="hours-time">18:30–23</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="mon">Lunedì</span>
+                <span class="hours-time">12–14:30</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="tue">Martedì</span>
+                <span class="hours-time">12–14:30 · 18:30–23</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container-custom footer-inner">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand-title">Sperone D’Italia</p>
+          <p class="footer-brand-subtitle">
+            <span data-i18n="emotion">L’emozione di piatti unici</span> · Dal 2010
+          </p>
+        </div>
+
+        <div class="footer-social-links">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ristorantesperoneditalia/" target="_blank" rel="noreferrer"
+            class="social-circle-link" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=100057370487625" target="_blank" rel="noreferrer"
+            class="social-circle-link" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:andreascarale1972@gmail.com" class="social-circle-link" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="footer-copyright">
+        © <span id="currentYear">2026</span> Ristorante Pizzeria Sperone D’Italia
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
